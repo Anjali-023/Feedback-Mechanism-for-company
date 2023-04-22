@@ -1,0 +1,38 @@
+<main>
+        <article id="registartion">
+            <h4> I'm ready for to initiate the process.</h4>
+            
+            <fieldset>
+                <legend>Registration Window</legend>
+                <p>
+                    <label for="Username">Username:</label>
+            <input type="text" name="username" id="Username" placeholder="aisha" autocomplete="on"
+            required= autofocus>
+
+                </p>
+                <p>
+                <label for="password">password:</label>
+                <input type="password" name="password" id="password"
+                placeholder="your secret"  required>
+            </p>
+            <p>
+                <label for="firstName">First name:</label>
+        <input type="text" name="firstName" id="firstName"
+        placeholder="Jane" autocomplete="on" required
+        autofocus>
+            </p>
+            <p>
+                <label for="lastName">last name:</label>
+        <input type="text" name="lastName" id="lastName"
+        placeholder="doe" autocomplete="on" required>
+            </p>
+            <p>
+                <label for="email">last name:</label>
+        <input type="email" name="email" id="email"
+        placeholder="doe" autocomplete="on" required>
+            </p>
+            <button type="confirm">confirm</button>
+            <button type="cancel">cancel</button>
+            </fieldset>
+            <br>
+        </article>
