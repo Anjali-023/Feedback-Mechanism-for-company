@@ -1,0 +1,235 @@
+import java.awt.*;
+import java.io.*;
+import java.awt.event.*;
+import javax.swing.*;
+class scr extends JFrame{
+    scr()
+    {
+      
+        //FONT
+        Font r1 =new Font("serif",Font.ROMAN_BASELINE,50);
+        Font x =new Font("serif",Font.ROMAN_BASELINE,30);
+        JPanel heading;
+        //haeding
+        JLabel n=new JLabel(" Review ");
+        n.setForeground(Color.BLUE);
+        n.setBounds(550,00,500,50);
+        n .setFont(r1);
+        
+        //header
+        JLabel h;
+               h=new JLabel();
+             h.setBackground(new Color(0,0,0,60));
+             h.setBounds(0,0,1600,70);
+             h.add(n);
+             // enrolment form
+             JLabel l;
+             l=new JLabel();
+             l.setLayout(null);
+             l.setBounds(00,70,1530,2000);
+              l.setBackground(new Color(00,00,00,60));
+              //first name
+              JLabel w1=new JLabel ("NAME");
+              w1.setBounds(0,50,500,30);
+              w1.setForeground(Color.PINK);
+              w1.setFont(x);
+               l.add(w1);
+               JTextField h1 =new JTextField();
+               h1.setBounds(0,90,500,40);
+               h1.setBackground(new Color(210,200,190,180));
+               l.add(h1);
+              //mob no.
+              
+              JLabel q8=new JLabel ("obile number");
+              q8.setBounds(0,150,800,40);
+              q8.setForeground(Color.PINK);q8.setFont(x);
+l.add(q8);
+              JTextField i =new JTextField();
+              i.setBounds(0,210,500,40);
+              i.setBackground(new Color(210,200,190,180));
+              l.add(i);
+
+              //email
+
+              JLabel q9=new JLabel ("email");
+              q9.setBounds(0,270,500,40);
+              q9.setForeground(Color.PINK);
+              q9.setFont(x);
+             l.add(q9);
+              JTextField j =new JTextField();
+              j.setBounds(0,330,500,40);
+              j.setBackground(new Color(210,200,190,180));
+              l.add(j);
+
+              //gender
+             
+              JLabel q4=new JLabel ("gender");
+              q4.setBounds(00,390,500,40);
+              q4.setForeground(Color.PINK);
+              q4.setFont(x);
+             l.add(q4);
+             String T[]={"enter your opinion","MALE","FEMALE","OTHERS"};
+              JComboBox e =new JComboBox(T);
+              e.setBounds(0,450,500,40);
+              e.setBackground(new Color(210,200,190,180));
+              l.add(e);
+
+             //age
+             
+              JLabel q7=new JLabel ("Age");
+              q7.setBounds(0,510,500,40);
+              q7.setForeground(Color.PINK);
+              q7.setFont(x);
+             l.add(q7);
+             JTextField a =new JTextField();
+             a.setBounds(0,570,500,40);
+a.setBackground(new Color(210,200,190,180));
+             l.add(a);
+             
+
+              //question
+
+              JLabel q1=new JLabel ("how supported did you feel regarding the policies ?");
+              q1.setBounds(550,30,800,40);
+              q1.setForeground(Color.PINK);
+              q1.setFont(x);
+             l.add(q1);
+             
+            String T1[]={"enter your opinion","good","better","best","average","worst"};
+             JComboBox e1 =new JComboBox(T1);
+             e1.setBounds(550,90,500,40);
+             e1.setBackground(new Color(210,200,190,180));
+             l.add(e1);
+
+              //question
+             
+              JLabel q2=new JLabel ("how much can you rely on are company policies?");
+              q2.setBounds(550,150,800,40);
+              q2.setForeground(Color.PINK);
+              q2.setFont(x);
+             l.add(q2);
+             
+            String T2[]={"enter your opinion","good","better","best","average","worst"};
+             JComboBox e2=new JComboBox(T2);
+             e2.setBounds(550,210,500,40);
+             e2.setBackground(new Color(210,200,190,180));
+             l.add(e2);
+              //question
+              
+              JLabel q3=new JLabel ("was there any benefits of these policies?");
+              q3.setBounds(550,270,800,40);
+              q3.setForeground(Color.PINK);
+              q3.setFont(x);
+             l.add(q3);
+              JTextField d =new JTextField();
+              d.setBounds(550,330,500,40);
+              d.setBackground(new Color(210,200,190,180));
+              l.add(d);
+//question
+              
+              JLabel q5=new JLabel ("explain any discripancies.");
+              q5.setBounds(550,390,800,40);
+              q5.setForeground(Color.PINK);
+              q5.setFont(x);
+             l.add(q5);
+              JTextField f =new JTextField();
+              f.setBounds(550,440,500,40);
+              f.setBackground(new Color(210,200,190,180));
+              l.add(f);
+              //cquestion
+              
+              JLabel q6=new JLabel ("issues related to this survey!");
+              q6.setBounds(550,500,800,40);
+              q6.setForeground(Color.PINK);
+              q6.setFont(x);
+             l.add(q6);
+              JTextField g =new JTextField();
+              g.setBounds(550,560,500,40);
+              g.setBackground(new Color(210,200,190,180));
+              l.add(g);
+             
+              
+              
+             
+
+
+              //buttons
+             JButton b1 = new JButton("Save");
+               b1.setBounds(00,640,300,50);
+               l.add(b1);
+
+               JButton b2 = new JButton("cancel");
+               b2.setBounds(550,640,300,50 );
+               l.add(b2);
+ b1.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent p)
+                {
+                    String s1 = a.getText();
+                     String s2 =e1.getSelectedItem() + "";
+                      String s3 =e2.getSelectedItem() + "";
+                       String s4 =d.getText();
+                        String s5 =e.getSelectedItem() + "";
+                         String s6 =f.getText();
+                          String s7 =g.getText();
+                           String s8 =h.getText();
+                            String s9 =i.getText();
+                             String s10 =j.getText();
+                             if(p.getSource()==b1){
+                               try {
+                                
+                              
+                                FileWriter y =new FileWriter("scr.txt",true);
+                                y.write(s1+"\n");
+                                y.write(s2+"\n");
+                                y.write(s3+"\n");
+                                y.write(s4+"\n");
+                                y.write(s5+"\n");
+                                y.write(s6+"\n");
+                                y.write(s7+"\n");
+                                y.write(s8+"\n");
+                                y.write(s9+"\n");
+                                y.write(s10+"\n");
+                                y.close();
+                             }
+                             catch(Exception ap){
+                                System.out.println(ap);
+                             }
+                           
+                            }
+                            JOptionPane
+                    .showMessageDialog( l, "Successfully Saved" + " The Details");
+                        }
+                });
+                //action listner to close form
+                b2.addActionListener(new ActionListener(){
+                    public void actionPerformed(ActionEvent p){
+                   dispose();
+                        
+                    }
+                });
+//frame
+    
+       setSize(2000,1500);
+        setLayout(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+        //background
+
+        ImageIcon background_image= new ImageIcon("I");
+        Image img=background_image.getImage();
+        Image temp_img = img.getScaledInstance(1600,910,Image.SCALE_FAST);
+        background_image = new ImageIcon(temp_img);
+        JLabel background =new JLabel ("",background_image,JLabel.CENTER);
+         background.setBounds(0,0,1600,900);
+         add(background);
+         setVisible(true);
+         background.add(h);
+         background.add(l);
+
+
+    }
+public static void main(String args[])
+{
+    new scr();
+}
+}
