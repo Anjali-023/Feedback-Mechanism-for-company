@@ -1,0 +1,167 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.io.*;
+
+//login form
+
+class login extends JFrame {
+  login() throws IOException {
+    // font
+    Font f = new Font("HANGING_BASELINE", Font.BOLD, 80);
+    Font m = new Font("Serif", Font.ROMAN_BASELINE, 30);
+    // heading
+    JLabel k = new JLabel("login");
+    k.setBounds(650, 5, 300, 120);
+    k.setForeground(Color.orange);
+    k.setBackground(new Color(100, 100, 100, 60));
+    k.setFont(f);
+    // header
+    JPanel l = new JPanel();
+    l.setLayout(null);
+    l.setBounds(00, 0, 1600, 120);
+    l.setForeground(Color.gray);
+    l.setBackground(new Color(100, 100, 100, 60));
+    l.add(k);
+    // login panel
+    JPanel login = new JPanel();
+    login.setLayout(null);
+    login.setBounds(480, 200, 600, 400);
+    login.setBackground(new Color(210, 200, 190, 80));
+
+    // entries
+    JLabel username = new JLabel("USERNAME");
+    username.setBounds(220, 30, 300, 30);
+    username.setBackground(new Color(210, 200, 190, 180));
+    username.setFont(m);
+    login.add(username);
+    // username coulumn
+    JTextField user = new JTextField("");
+    user.setBounds(100, 90, 400, 50);
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.io.*;
+
+//login form
+
+class login extends JFrame {
+  login() throws IOException {
+    // font
+    Font f = new Font("HANGING_BASELINE", Font.BOLD, 80);
+    Font m = new Font("Serif", Font.ROMAN_BASELINE, 30);
+    // heading
+    JLabel k = new JLabel("login");
+    k.setBounds(650, 5, 300, 120);
+    k.setForeground(Color.orange);
+    k.setBackground(new Color(100, 100, 100, 60));
+    k.setFont(f);
+    // header
+    JPanel l = new JPanel();
+    l.setLayout(null);
+    l.setBounds(00, 0, 1600, 120);
+    l.setForeground(Color.gray);
+    l.setBackground(new Color(100, 100, 100, 60));
+    l.add(k);
+    // login panel
+    JPanel login = new JPanel();
+    login.setLayout(null);
+    login.setBounds(480, 200, 600, 400);
+    login.setBackground(new Color(210, 200, 190, 80));
+
+    // entries
+    JLabel username = new JLabel("USERNAME");
+    username.setBounds(220, 30, 300, 30);
+    username.setBackground(new Color(210, 200, 190, 180));
+    username.setFont(m);
+    login.add(username);
+    // username coulumn
+    JTextField user = new JTextField("");
+    user.setBounds(100, 90, 400, 50);
+    user.setForeground(Color.pink);
+    login.add(user);
+    // passward
+    JLabel passward = new JLabel("PASSWARD");
+    passward.setBounds(220, 170, 300, 40);
+    passward.setBackground(new Color(210, 200, 190, 180));
+    passward.setFont(m);
+    login.add(passward);
+    // username coulumn
+    JTextField pass = new JTextField("");
+    pass.setBounds(100, 220, 400, 50);
+    pass.setForeground(Color.pink);
+    login.add(pass);
+    // adding buttons
+    JButton j1 = new JButton("LOGIN");
+    j1.setBounds(100, 350, 150, 40);
+    j1.setForeground(Color.blue);
+    login.add(j1);
+
+    JButton j2 = new JButton("SIGNUP");
+    j2.setBounds(350, 350, 150, 40);
+    j2.setForeground(Color.blue);
+    login.add(j2);
+    // frame
+    setSize(2000, 1600);
+    setLayout(null);
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    j1.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent p) {
+        String s1 = user.getText();
+        String s2 = pass.getText();
+        if (p.getSource() == j1) {
+          try {
+            FileWriter y = new FileWriter("login.txt", true);
+            y.write(s1 + "\n");
+            y.write(s2 + "\n");
+            y.close();
+          } catch (Exception ap) {
+            System.out.println(ap);
+          }
+        }
+try{
+          BufferedReader reader1 = new BufferedReader(new FileReader("form.txt"));
+          BufferedReader reader2 = new BufferedReader(new FileReader("login.txt"));
+           
+            String line1 = reader1.readLine();
+            String line2 = reader2.readLine();
+            if ((username.equals(line1)&&passward.equals(line2)) ) {
+              new scr();
+            } else {
+              JOptionPane
+                  .showMessageDialog(null, "register" + " first");
+            }
+          
+          reader1.close();
+        reader2.close();
+         } catch (Exception ap) {
+        System.out.println(ap);
+      }
+      
+      }
+
+    });
+    j2.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent p) {
+        new form();
+      }
+    });
+    
+    // background
+    ImageIcon background_image = new ImageIcon("downloadfile-1.jpg");
+    Image img = background_image.getImage();
+    Image temp_img = img.getScaledInstance(2000, 1600, Image.SCALE_SMOOTH);
+    background_image = new ImageIcon(temp_img);
+    JLabel background = new JLabel("", background_image, JLabel.CENTER);
+    background.setBounds(0, 0, 1600, 900);
+    add(background);
+    background.add(l);
+    background.add(login);
+    setVisible(true);
+  }
+ public static void main(String args[]) throws IOException {
+    new login();
+   
+
+}
+}
